@@ -11,6 +11,9 @@ scipy = "*"
 scikit-learn = "*"
 matplotlib = "*"
 ipykernel = "*"
+tensorflow = "*"
+pydot = "*"
+graphviz = "*"
 
 [dev-packages]
 ipykernel = "*"
