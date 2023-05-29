@@ -26,8 +26,8 @@ single_instance_path: "PATH TO INSTANCE"
 #--------------------- Data Engineering ----------------------
 # sliding window algorithm parameters
 sliding_window:
-  ws: 40
-  overlap: 33
+  ws: 30
+  overlap: 15
   w_type: "hann"
   w_center: True
   print_stats: False

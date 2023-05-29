@@ -124,6 +124,22 @@ def df_rebase(df1, df2, order_list, rename_dict):
 
     return df
 
+def df_rebase_acc(df, order_list, rename_dict):
+    """Changes the order and name of DataFrame columns to the project's needs for readability.
+
+    Args:
+        df: The pandas DataFrame.
+        order_list: List object that contains the proper order of the default sensor column names.
+        rename_dict: Dictionary object that contains the renaming list based on the project needs.
+
+    Returns:
+        A DataFrame with the new columns order and names.
+    """
+    df = df[order_list]  # keep and re-order only the necessary columns of the initial DataFrame
+    df = df.rename(columns=rename_dict)  # rename the columns
+
+    return df
+
 
 def rename_df_column_values(np_array, y, columns_names=("acc_x", "acc_y", "acc_z")):
     """Creates a DataFrame with a "y" label column and replaces the values of the y with the index
