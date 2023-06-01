@@ -1,6 +1,4 @@
-# Project Name
-
-This is a Python project that uses pip to manage dependencies.
+# Handwriting-Sensor-Recognition
 
 ## Installation
 
