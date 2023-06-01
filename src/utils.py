@@ -150,6 +150,12 @@ def rename_df_column_values(np_array, y, columns_names=("acc_x", "acc_y", "acc_z
     return df
 
 def impute_nan(X):
+    """ Impute NaN values using KNNImputer with custom weights.
+    Args:
+        X: 3D NumPy array with NaN values (numpy.ndarray).
+    Returns:
+        3D NumPy array with imputed values (numpy.ndarray).
+    """
 
     def custom_weights(distances):
         # Calculate distance mod 6 
