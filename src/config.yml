@@ -74,3 +74,5 @@ fit:
   epochs:
   batch:
   verbose: "auto"
+
+random_state: 42
