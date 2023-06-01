@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 from sklearn import preprocessing
 import matplotlib.pyplot as plt
+from sklearn.impute import KNNImputer
 #import seaborn as sns
 
 
@@ -23,7 +24,6 @@ def sliding_window_pd(df, ws=500, overlap=250, w_type="hann", w_center=True, pri
     """
     counter = 0
     windows_list = list()
-    print(ws, overlap, w_type, w_center)
     # min_periods: Minimum number of observations in window required to have a value;
     # For a window that is specified by an integer, min_periods will default to the size of the window.
     for window in df.rolling(window=ws, step=overlap, min_periods=ws, win_type=w_type, center=w_center):
@@ -180,3 +180,23 @@ def encode_labels(instances_list):
     instances_arr = le.transform(instances_list)
 
     return instances_arr
+
+def impute_nan(X):
+
+    def custom_weights(distances):
+        # Calculate distance mod 6 
+        mod_distances = distances % (shapes[2])
+
+        # Assign weight 1 / (distance ^ 2) to neighbors with distance mod 6 equal to 0, weight 0 to others
+        weights = np.where(mod_distances == 0, 1 / (distances**2), 0)
+
+        return weights
+    
+    shapes = X.shape
+    data = np.reshape(X, (X.shape[0], X.shape[1] * X.shape[2]))
+    imputer = KNNImputer(n_neighbors=5, weights=custom_weights)
+    imputed_data = imputer.fit_transform(data)
+    imputed_data = np.reshape(imputed_data, shapes)
+
+    return imputed_data
+
