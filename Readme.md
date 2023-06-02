@@ -1,5 +1,17 @@
 # Handwriting-Sensor-Recognition
 
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Installation](#installation)
+3. [Data Collection](#data-collection)
+3. [Data Conversion](#data-conversion)
+4. [Model Generation](#model-generation)
+5. [Analysis and Findings](#model-accuracy-and-observations)
+6. [Classification Report](#classification-report)
+
+Please note that the table of contents may vary depending on the content and structure of your report. It is recommended to update the table of contents accordingly to accurately reflect the sections and their order in your report.
+
 ## Introduction
 
 In this report, we will discuss the process of converting the data and generating a model for handwriting sensor recognition. The goal of this project was to develop a model that can accurately identify different classes of handwriting based on sensor data.
@@ -35,6 +47,10 @@ unzip data.zip
 2. Run all cells on `aiot_project_2023.ipynb`
 
 ## Report
+
+### Data Collection
+
+An report on our data collection can be found [here](docs/data_collection_procedure.docx.pdf)
 
 ### Data Conversion
 
