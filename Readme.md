@@ -28,6 +28,8 @@ unzip data.zip
 ## Usage
 1. In `config.yml` enter your mongodb uri
 
+2. Don't forget to select the correct kernel on both `ipynb` files
+
 1. Run all cells on `aiot_dataset_creation.ipynb`
 
 2. Run all cells on `aiot_project_2023.ipynb`
