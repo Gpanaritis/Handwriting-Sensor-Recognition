@@ -50,7 +50,7 @@ unzip data.zip
 
 ### Data Collection
 
-An report on our data collection can be found [here](docs/data_collection_procedure.docx.pdf)
+An report on our data collection can be found [here](docs/data_collection_procedure.pdf)
 
 ### Data Conversion
 
