@@ -78,9 +78,9 @@ By trying different algorithms and tuning their hyperparameters, we aimed to fin
 
 | Model         | Best Parameters                               | Best estimator                                         | Best score         | Accuracy    |
 |---------------|-----------------------------------------------|--------------------------------------------------------|--------------------|-------------|
-| SVM           | {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}    | SVC(C=10, gamma=0.001)                                 | 0.8552036199095022 | 0.828125    |
-| Random Forest | {'max_depth': 30, 'n_estimators': 200}        | RandomForestClassifier(max_depth=30, n_estimators=200) | 0.8316742081447964 | 0.890625    |
-| CNN           | {'optimizer': 'adam', 'learning_rate': 0.001} | CNNModel(hidden_layer=[60])                            | N/A                | 0.876953125 |
+| SVM           | {'C': 10, 'gamma': 0.001, 'kernel': 'rbf'}    | SVC(C=10, gamma=0.001)                                 | 0.8552 | 0.8281    |
+| Random Forest | {'max_depth': 30, 'n_estimators': 200}        | RandomForestClassifier(max_depth=30, n_estimators=200) | 0.8316 | 0.8906    |
+| CNN           | {'optimizer': 'adam', 'learning_rate': 0.001} | CNNModel(hidden_layer=[60])                            | N/A                | 0.8769 |
 
 Overall, the Random Forest model achieved the highest accuracy of 89.06%, closely followed by the CNN model with 87.70%. The SVM model also performed reasonably well with an accuracy of 82.81%. These results suggest that both ensemble methods (Random Forest) and deep learning (CNN) can be effective the classification task, but further analysis and evaluation of the CNN model are needed to obtain a comprehensive understanding of its performance.
 ### Classification Report
