@@ -1,5 +1,5 @@
 # ignore vscode settings
 .vscode/*
 
-# ignore all pycache in project
-src/__pycache__/
+# ignore all files in pycache in src/
+src/**/__pycache__/*
